@@ -1,0 +1,372 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Global Styles */
+
+h1 {
+  font-size: 50px;
+  line-height: 64px;
+  color: #222;
+}
+
+h2 {
+  font-size: 46px;
+  line-height: 54px;
+  color: #222;
+}
+
+h4 {
+  font-size: 20px;
+  color: #222;
+}
+
+h6 {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+p {
+  font-size: 16px;
+  color: #465b52;
+  margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+  padding: 40px 80px;
+}
+
+.section-m1 {
+  margin: 40px 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 40px;
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    z-index: 999;
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+#navbar li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+#navbar li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    transition: 0.3s ease;
+}
+#navbar li a:hover,
+#navbar li a.active{
+    color: white;
+}
+#navbar li a.active::after,
+#navbar li a:hover::after {
+    content:"";
+    width: 25%;
+    height: 2px;
+    background:white;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+/* ------------------------------------------------------------------------*/
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.container {
+  padding: 0 20px;
+  position: fixed;
+  top: 30px; /* Adjust the top position as per your requirement */
+  left: 20px; /* Adjust the left position as per your requirement */
+  z-index: 2;
+}
+
+@media screen and (max-width: 850px) {
+  /* Adjust the breakpoint (768px) as needed */
+  .container {
+    display: none; /* Hide the original image on smaller screens */
+  }
+}
+
+/*-----------------------------------------------*/
+
+#hero {
+  padding: 0 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin-top: 140px;
+  margin-left: 70px;
+  
+}
+#hero h4{
+  color:white;
+  padding-top: 500px;
+  margin-bottom: 15px;
+}
+#hero button{
+  position: relative;
+  background-color: transparent;
+  border: none;
+  font-size: 17.5px;
+  color: white;
+  cursor: pointer;
+}
+#hero button i{
+  font-size: 14px;
+}
+#hero button::before{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 1.5px;
+  background-color:white;
+  transform: translateX(-50%);
+  transition: width 0.5s ease;
+}
+#hero button:hover::before{
+  width: 100%;
+}
+
+
+#container {
+  display: flex;
+  flex-direction: column;
+}
+
+.background-image {
+  width: 100%;
+}
+
+.additional-image {
+  width: 50%;
+}
+
+.additional-image-container {
+  display: flex;
+}
+
+.additional-image {
+  flex: 1;
+}
+.additional-image + .additional-image {
+  margin-left: 1px;
+}
+
+.WOMENSWEAR{
+  position: relative;
+  background-color: transparent;
+  border: none;
+  font-size: 15.5px;
+  color: white;
+  cursor: pointer;
+  top: 1950px;
+  left: -50px;
+}
+.MENSWEAR {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  font-size: 15.5px;
+  color: white;
+  cursor: pointer;
+  top: 1950px;
+  left: 575px;
+
+}
+.button-box {
+  display: flex;
+  padding: 0 80px;
+  align-items: flex-start;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.additional-image-box {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  justify-content: center;
+}
+.additional-image-box .additional-img{
+  transition: transform 0.5s ease;
+}
+
+.add1:hover:hover img {
+  transform: scale(1.1);
+}
+.add2:hover:hover img {
+  transform: scale(1.1);
+}
+.add3:hover:hover img {
+  transform: scale(1.1);
+}
+.add4:hover:hover img {
+  transform: scale(1.1);
+}
+
+.store {
+  display: block;
+  margin: 0 auto;
+}
+.additional-img {
+  display: block;
+}
+
+#newsletter{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  background-image: url(img/news.jpg);
+  background-size: cover;
+  padding: 75px;
+}
+
+.newstext h4 {
+  font-size: 30px; 
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  margin-bottom: 10px;
+}
+
+.newstext p {
+  font-size: 18px; /* Adjust the font size as desired */
+  color: #f9f9f9; /* Set the font color */
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+}
+
+.newstext span {
+  font-weight: bold;
+  color: gold;
+}
+
+
+.form {
+  display: flex;
+}
+
+.form input[type="text"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+.form button {
+  padding: 10px 16px;
+  background-color: #ff5500;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.form button:hover {
+  background-color: #ff7733;
+}
+
+.cold {
+  padding: 0 20px;
+  position: relative;
+  top: 30px;
+  left: 20px;
+}
+
+.col{
+  margin-top: 100px;
+  margin-left: 40px;
+}
+.col h4 {
+  font-size: 25px; 
+  color: #000000;
+  font-family: Arial, sans-serif;
+}
+
+.col p {
+  font-size: 15px; /* Adjust the font size as desired */
+  color: #303030; /* Set the font color */
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+}
+
+.col strong {
+  font-weight: bold;
+  color: rgb(160, 160, 160);
+}
+
+.follow{
+  padding: 0 20px;
+  position: relative;
+  top: 15px;
+  left: 20px;
+  margin-bottom: 70px;
+}
+.icon{
+  margin-top: 10px;
+  display:flex;
+  gap: 15px;
+  font-size:24px;
+}
+
+#flex{
+  display:flex;
+}
+.col1{
+  margin-top: 100px;
+  margin-left: 40px;
+}
+.col1 h4 {
+  font-size: 25px; 
+  color: #000000;
+  font-family: Arial, sans-serif;
+}
+
+.col1 p {
+  font-size: 15px; /* Adjust the font size as desired */
+  color: #303030; /* Set the font color */
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+}
